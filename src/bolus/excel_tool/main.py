@@ -33,12 +33,6 @@ if __name__ == "__main__":
     # Convert the RawUserInput to models
     input_structure = RawInputToUserInputStructure.convert(raw_user_input)
 
-    # TODO TEMP DUMP TO JSON
-    import json
-
-    with open("input_structure.json", "w") as f:
-        json.dump(input_structure.model_dump(mode="json"), f, indent=4)
-
     # Output directory - must NOT be synced with OneDrive when calculations are run
     output_dir = input_structure.settings.output_dir
 
